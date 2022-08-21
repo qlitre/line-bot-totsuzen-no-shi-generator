@@ -14,10 +14,9 @@ def test_get_bottom_line():
     # pattern WRYYY
     top_count = 5
     assert utils.get_bottom_line(top_count) == '￣Y^Y^Y^Y^￣'
-
     # pattern 鉛筆なめなめ
     top_count = 8
-    assert utils.get_bottom_line(top_count) == '￣Y^Y^Y^Y^Y^Y^Y￣'
+    assert utils.get_bottom_line(top_count) == '￣Y^Y^Y^Y^Y^Y^￣'
 
 
 def test_decorate_message():

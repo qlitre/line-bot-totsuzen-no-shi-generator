@@ -26,18 +26,13 @@ def get_bottom_line(top_count: int) -> str:
     "人":5
     "Y":4
     "^":2
-    という比率と仮定。長さを調整した文字を返す。
+    という比率と仮定。
     """
     top_length = top_count * 5
-    # Yと^を足した18で割って切り下げた数が最低の繰り返し数
+    # Yと^を足した6で割って切り下げた数を繰り返し数とする
     bottom_count = math.floor(top_length / 6)
     bottom_string = "Y^" * bottom_count
 
-    # 次のYを足して差分が縮まればYを足す
-    bottom_length = bottom_count * 6
-    diff = top_length - bottom_length
-    if diff > abs(top_length - (bottom_length + 4)):
-        bottom_string += 'Y'
     return f'￣{bottom_string}￣'
 
 
